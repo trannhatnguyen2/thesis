@@ -1,0 +1,2 @@
+[servers]
+34.67.23.216 ansible_ssh_private_key_file=/home/nhatnguyen18/.ssh/id_rsa

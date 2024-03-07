@@ -1,0 +1,7 @@
+# deploy
+ansible==8.3.0
+ansible-core==2.15.9
+google-auth==2.28.1
+requests==2.31.0
+
+pytest==7.4.2

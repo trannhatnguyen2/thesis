@@ -1,0 +1,12 @@
+apiVersion: v2
+name: sentiment
+description: My Helm Chart for Sentiment app
+
+type: application
+
+version: 0.1.0
+appVersion: "1.0.0"
+
+maintainers:
+  - email: nguyentn20406c@gmail.com
+    name: nguyentn20406c
