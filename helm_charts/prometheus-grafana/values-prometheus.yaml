@@ -361,7 +361,7 @@ alertmanager:
     ## Hosts must be provided if Ingress is enabled.
     ##
     hosts:
-      - alertmanager.nguyentn.com
+      - alertmanager.nguyentn.site
 
     ## Paths to use for ingress rules - one path should match the alertmanagerSpec.routePrefix
     ##
@@ -915,7 +915,7 @@ grafana:
     ## Must be provided if Ingress is enable.
     ##
     hosts:
-      - grafana.nguyentn.com
+      - grafana.nguyentn.site
     # hosts: []
 
     ## Path for grafana ingress
@@ -2728,7 +2728,7 @@ prometheus:
     ## Must be provided if Ingress is enabled.
     ##
     hosts:
-      - prometheus.nguyentn.com
+      - prometheus.nguyentn.site
     # hosts: []
 
     ## Paths to use for ingress rules - one path should match the prometheusSpec.routePrefix
