@@ -2,3 +2,5 @@ data/
 model_storage_v2/phobert_fold5.pth
 model_storage_v2/phobert-base-v2
 __pycache__
+model_storage/phobert_fold5.pth
+model_storage/phobert-base-v2
