@@ -38,31 +38,31 @@ This repo will help and guide you to build and serve ML model as in a production
 ```txt
 Thesis-Sentiment
     ├── app/                                            /* application /*
-    │   ├── preprocess/                                     /* preprocessing dataset /*
-    │   └── model.py                                        /* load model and predict sentiment /*
+    │   ├── preprocess/                                 /* preprocessing dataset /*
+    │   └── model.py                                    /* load model and predict sentiment /*
     ├── model_storage/                                  /* storage model /*
     │   ├── phobert-base-v2/
     │   └── phobert_fold5.pth
     ├── helm_chart/                                     /* manage Kubernetes applications /*
-    │   ├── app/                                            /* templates for app /*
-    │   ├── nginx_ingress/                                  /* templates for nginx-ingress /*
-    │   ├── prometheus-grafana/                             /* templates for prometheus & gafana (Metrics) /*
+    │   ├── app/                                        /* templates for app /*
+    │   ├── nginx_ingress/                              /* templates for nginx-ingress /*
+    │   ├── prometheus-grafana/                         /* templates for prometheus & gafana (Metrics) /*
     │   │   └── kube-prometheus-stack/
     │   │       └── templates/
-    │   │           ├── alertmanager/                           /* templates for alertmanager /*
-    │   │           ├── exporters/                              /* templates for exporters /*
+    │   │           ├── alertmanager/                   /* templates for alertmanager /*
+    │   │           ├── exporters/                      /* templates for exporters /*
     │   │           ├── prometheus/
     │   │           ├── gafana/
     │   │           └── ../
-    │   ├── elasticsearch/                                  /* templates for elasticsearch (Logs) /*
-    │   └── jaeger-operator/                                /* templates for jaeger (Traces) /*
+    │   ├── elasticsearch/                              /* templates for elasticsearch (Logs) /*
+    │   └── jaeger-operator/                            /* templates for jaeger (Traces) /*
     ├── ansible/
     │   ├── deploy_jenkins/
-    │   │   ├── create_compute_instance.yaml                    /* config compute instance /*
-    │   │   └── deploy_jenkins.yaml                             /* config deploy jenkins to instance /*
-    │   ├── secret_keys/                                    /* service account in Google Cloud /*
+    │   │   ├── create_compute_instance.yaml            /* config compute instance /*
+    │   │   └── deploy_jenkins.yaml                     /* config deploy jenkins to instance /*
+    │   ├── secret_keys/                                /* service account in Google Cloud /*
     │   │   └── mlops-416203-8f35c6f23ccf.json
-    │   └── inventory                                       /* host group /*
+    │   └── inventory                                   /* host group /*
     ├── terraform/                                      /* config GKE /*
     │   ├── main.tf
     │   ├── variables.tf
