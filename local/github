@@ -1,3 +1,46 @@
-Github Tokens: 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
+Github Tokens: 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
 
 Docker Hub: dckr_pat_1bz28KHk0rY1LY9tpJudLo7KQ40
+
+
+.
+└── thesis-sentiment/
+    ├── app/                                            # application
+    │   ├── preprocess/                                     # preprocessing dataset
+    │   └── model.py                                        # load model and predict sentiment
+    ├── model_storage/                                  # storage model
+    │   ├── phobert-base-v2/
+    │   └── phobert_fold5.pth
+    ├── helm_chart/                                     # manage Kubernetes applications
+    │   ├── app/                                            # templates for app
+    │   ├── nginx_ingress/                                  # templates for nginx-ingress
+    │   ├── prometheus-grafana/                             # templates for prometheus & gafana (Metrics)
+    │   │   └── kube-prometheus-stack/
+    │   │       └── templates/
+    │   │           ├── alertmanager/                           # templates for alertmanager
+    │   │           ├── exporters/                              # templates for exporters
+    │   │           ├── prometheus/
+    │   │           ├── gafana/
+    │   │           └── ../      
+    │   ├── elasticsearch/                                  # templates for elasticsearch (Logs)
+    │   └── jaeger-operator/                                # templates for jaeger (Traces)
+    ├── ansible/                                        
+    │   ├── deploy_jenkins/
+    │   │   ├── create_compute_instance.yaml                    # config compute instance
+    │   │   └── deploy_jenkins.yaml                             # config deploy jenkins to instance
+    │   ├── secret_keys/                                    # service account in Google Cloud
+    │   │   └── mlops-416203-8f35c6f23ccf.json
+    │   └── inventory                                       # host group
+    ├── terraform/                                      # config GKE
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── outputs.tf
+    ├── .gitignore
+    ├── Dockerfile                                      # build image to package model
+    ├── docker-compose.yaml               
+    ├── Jenkinsfile                                     # config workflow CI/CD
+    ├── main.py                                        
+    ├── client.py                                       # testing request
+    ├── README.md                                       # guide
+    ├── requirements.txt                                # libraries for app (packing model)
+    └── requirements_dev.txt                            # libraries for deployment

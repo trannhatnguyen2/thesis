@@ -10,7 +10,7 @@ def predict():
     logger.info("Sending POST requests!")
     data = TextIn(review='Xấu tệ.')
     response = requests.post(
-        "http://localhost:30000/predict",
+        "http://thesis.sentiment.com/predict",
         headers={
             "accept": "application/json",
         },
