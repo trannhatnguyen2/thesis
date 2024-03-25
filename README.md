@@ -4,13 +4,12 @@
 <!-- code_chunk_output -->
 
 - Contents:
-  _ [Introduction](#introduction)
-  _ [Repository structure](#repository-structure)
-  <!-- * [System architecture](#system-architecture) -->
-  _ [Prerequisites installation](#prerequisites-installation)
-  _ [Component Preparation](#component-preparation)
-  _ [Usage](#usage)
-  _ [Additional Usage](#additional-usage) \* [TODOs](#todos)
+  - [Introduction](#introduction)
+  - [Repository structure](#repository-structure)
+  - [Prerequisites installation](#prerequisites-installation)
+  - [Component Preparation](#component-preparation)
+  - [Usage](#usage)
+  - [Additional Usage](#additional-usage) \* [TODOs](#todos)
   <!-- /code_chunk_output -->
 
 ## Introduction:
