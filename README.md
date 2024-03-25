@@ -432,7 +432,7 @@ sudo docker restart jenkins
 - Go to your Github account [Github](https://github.com/)
 - Navigate Settings > Developer Settings > Personal access tokens
 - Create your access token. I'll give this token full permissions just to make things simple. It can be adjusted as desired.
-  ![](assets/generateGithubToken-crop.gif)
+  <!-- ![](assets/generateGithubToken-crop.gif) -->
 
 And now, we can create new Jenkins pipeline by following these step:
 
@@ -455,7 +455,7 @@ And now, we can create new Jenkins pipeline by following these step:
 - Hit "Add webhook" box in the top right corner.
 - Fill "http://[JenkinsVMexternalIP]:8081/github-webhook/"
 - Select Content type "application/json" > "Let me select individual events" (Any event can be specified here to start the CI/CD pipeline. Meanwhile, I will decide which "push" and "pull request" events to set triggered.)
-  ![](assets/createWebhook-crop.gif)
+  <!-- ![](assets/createWebhook-crop.gif) -->
 
 - From now on, Jenkins will perform CI/CD as soon as you publish or pull a change to github automatically.
 
@@ -465,7 +465,7 @@ We can now navigate to "http://thesis.sentiment.com/docs" in your web browser to
 
 ![testAPI](assets/testAPI.png)
 
-### Using Prometheus and Grafana:
+<!-- ### Using Prometheus and Grafana:
 
 #### Node exporter:
 
@@ -506,7 +506,7 @@ To capture and export metrics from Sentiment Analysis API (`counter` for "number
 
 - You can customize other metrics from [Opentelemetry API metrics](https://opentelemetry.io/docs/specs/otel/metrics/api/) by yourself. Then just edit the `/app/main.py` file to wrap up.
 - Go to [Prometheus UI](http://prometheus.nguyentn.site/) to perform any expressions as you like. For instance, I want to know how many responses, on average, will come in within 5 minutes in 1 second through this expression "`rate(diabetespred_response_histogram_seconds_count[5m])`"
-  ![prometheusQueryExample](assets/prometheusQueryExample.png)
+  ![prometheusQueryExample](assets/prometheusQueryExample.png) -->
 
 ---
 
