@@ -9,7 +9,6 @@
   - [Prerequisites installation](#prerequisites-installation)
   - [Component Preparation](#component-preparation)
   - [Usage](#usage)
-  - [Additional Usage](#additional-usage) \* [TODOs](#todos)
   <!-- /code_chunk_output -->
 
 ## Introduction:
