@@ -78,7 +78,7 @@ Thesis-Sentiment
     └── requirements_dev.txt                            /* libraries for deployment /*
 ```
 
-## Prerequisites installation:
+<!-- ## Prerequisites installation:
 
 ### Google Cloud Platform: Account Registration & Project Billing
 
@@ -171,8 +171,6 @@ ansible-playbook -i ../inventory deploy_jenkins.yml
 
 **Note:** Please save this `Jenkins external IP`, we will use it later to access Jenkins again
 
-<!-- Integrate your github source to the Jenkins VM once it has been created. You can follow this link: [Integrate Jenkins with GitHub ](https://www.whizlabs.com/blog/integrate-jenkins-with-github/) -->
-
 ### Create GKE cluster:
 
 Change directory to `/terraform` folder and initializes a working directory containing Terraform configuration files.
@@ -238,11 +236,6 @@ Install the `nginx controller` on this new cluster right now to route traffic fr
 helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace
 ```
 
-<!-- **Note**: Remember to create a namespace `model-serving` first in your new cluster. Because our application will be deployed in `model-serving` namespace.
-```bash
-kubectl create ns model-serving
-``` -->
-
 ### Create Prometheus and Grafana monitoring:
 
 Prometheus and Grafana form a powerful combination for monitoring and observability. Therefore, I will utilize these two tools as my cluster's monitoring services.
@@ -290,28 +283,6 @@ First, create an alerting rule with `additionalPrometheusRules` in `values-prome
 Setting up a webhook on `Discord`:
 
 I assume you're already using Discord and have a channel that you want to send alerts to (in this example, we're using #alerts).
-
-<!-- Edit the channel settings by clicking the "Edit Channel" cog button:
-
-![discordWebhook](assets/webhookdiscord.png)
-
-Next, head to the "Integrations" menu item:
-
-![Intergrate](assets/discordIntergrate.png)
-
-Click on "Create Webhook":
-
-![CreateWebhook](assets/createWebhook.png)
-
-Click on the newly added hook:
-
-![newlyCreateWebhook](assets/newlyCreatedwebhook.png)
-
-Adjust the name, copy the webhook URL, and save the hook:
-
-![Botconfig](assets/Botdiscordconfig.png) -->
-
-![Botconfig](assets/discord.png)
 
 Then go to line 297 in `values-prometheus.yaml` file to replace the <DISCORD_WEBHOOK_URL> placeholder with the webhook URL you just copied from Discord. It should look something like this: https://discord.com/api/webhooks/XXX/YYY.
 
@@ -396,14 +367,6 @@ sudo docker restart jenkins
 
 #### Connect and assign permissions so that Jenkins connect to the K8s cluster:
 
-<!-- * Navigate to Dashboard > Manage Jenkins > Node and Clouds:
-![connectk8sStep1](assets/k8sconnectStep1.png)
-* SELECT "Clouds":
-![connectk8sStep2](assets/k8sconnectStep2.png)
-* Add a new cloud > Kubernetes
-![connectk8sStep3](assets/k8sconnectStep3.png)
-*  Then, an expand UI to connect to Kubernetes will appear: -->
-
 - In local terminal, create `ClusterRoleBinding` to grant permissions that access cluster-wide (granting permissions across all namespaces):
 
   ```bash
@@ -430,7 +393,6 @@ sudo docker restart jenkins
 - Go to your Github account [Github](https://github.com/)
 - Navigate Settings > Developer Settings > Personal access tokens
 - Create your access token. I'll give this token full permissions just to make things simple. It can be adjusted as desired.
-  <!-- ![](assets/generateGithubToken-crop.gif) -->
 
 And now, we can create new Jenkins pipeline by following these step:
 
@@ -453,9 +415,8 @@ And now, we can create new Jenkins pipeline by following these step:
 - Hit "Add webhook" box in the top right corner.
 - Fill "http://[JenkinsVMexternalIP]:8081/github-webhook/"
 - Select Content type "application/json" > "Let me select individual events" (Any event can be specified here to start the CI/CD pipeline. Meanwhile, I will decide which "push" and "pull request" events to set triggered.)
-  <!-- ![](assets/createWebhook-crop.gif) -->
 
-- From now on, Jenkins will perform CI/CD as soon as you publish or pull a change to github automatically.
+- From now on, Jenkins will perform CI/CD as soon as you publish or pull a change to github automatically. --!>
 
 ### Test API:
 
