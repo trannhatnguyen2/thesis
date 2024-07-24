@@ -15,7 +15,7 @@
 
 This repo will help and guide you to build and serve ML model as in a production environment (Google Cloud Platform). I also used tool & technologies to quickly deploy the ML system into production and automate processes during the development and deployment of the ML system.
 
-<!-- ## Workflow graph: -->
+ ## Workflow graph: 
 
 ![systempipline](assets/project_pipeline.png)
 
@@ -30,8 +30,8 @@ This repo will help and guide you to build and serve ML model as in a production
 - Ingress controller: Nginx ingress
 - Cloud platform: Google cloud platform/GCP
 
-<!-- ### Kubernetes architecture:
-![k8sarchi](assets/Kubernetesarchi.png) -->
+ ### Kubernetes architecture:
+![k8sarchi](assets/Kubernetesarchi.png) 
 
 ## Repository structure:
 
@@ -78,7 +78,7 @@ Thesis-Sentiment
     └── requirements_dev.txt                            /* libraries for deployment /*
 ```
 
-<!-- ## Prerequisites installation:
+## Prerequisites installation:
 
 ### Google Cloud Platform: Account Registration & Project Billing
 
@@ -416,7 +416,7 @@ And now, we can create new Jenkins pipeline by following these step:
 - Fill "http://[JenkinsVMexternalIP]:8081/github-webhook/"
 - Select Content type "application/json" > "Let me select individual events" (Any event can be specified here to start the CI/CD pipeline. Meanwhile, I will decide which "push" and "pull request" events to set triggered.)
 
-- From now on, Jenkins will perform CI/CD as soon as you publish or pull a change to github automatically. --!>
+- From now on, Jenkins will perform CI/CD as soon as you publish or pull a change to github automatically.
 
 ### Test API:
 
@@ -424,7 +424,7 @@ We can now navigate to "http://thesis.sentiment.com/docs" in your web browser to
 
 ![testAPI](assets/testAPI.png)
 
-<!-- ### Using Prometheus and Grafana:
+ ### Using Prometheus and Grafana:
 
 #### Node exporter:
 
